@@ -3,6 +3,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 	id 'jacoco'
+	id 'org.sonarqube' version '2.8'
 }
 
 group = 'xyz.easy_coding.java.ci'
@@ -25,5 +26,11 @@ test {
 }
 
 jacoco {
-	toolVersion = "0.8.5"
+	toolVersion = '0.8.5'
+}
+
+sonarqube {
+	properties {
+		property 'sonar.sourceEncoding', 'UTF-8'
+	}
 }
